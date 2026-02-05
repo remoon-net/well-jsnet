@@ -2,8 +2,6 @@ package main
 
 import (
 	"context"
-	"crypto/ed25519"
-	"encoding/base64"
 	"log/slog"
 	"net"
 	"net/http"
@@ -22,17 +20,6 @@ import (
 )
 
 var Version = "dev"
-
-var LicensePubkeyStr string = "MZ8P26kG8OyarZWrYa0QKHZypSfzPjlU7bzxWQwOqRc="
-
-var LicensePubkey ed25519.PublicKey
-
-func init() {
-	if len(LicensePubkeyStr) != 0 {
-		pubkeyRaw := try.To1(base64.StdEncoding.DecodeString(LicensePubkeyStr))
-		LicensePubkey = ed25519.PublicKey(pubkeyRaw)
-	}
-}
 
 func main() {
 	jsVPN := gojs.JSGo.Get("importObject").Get("vpn")
