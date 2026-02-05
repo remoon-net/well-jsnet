@@ -44,7 +44,7 @@ func main() {
 		dev := device.NewDevice(tdev, b, logger)
 		try.To(dev.IpcSet(cfg.IpcConfig()))
 		try.To(dev.Up())
-		try.To(vtun.RouteUp(tdev, []string{cfg.NAT}))
+		try.To(vtun.RouteUp(tdev, []string{cfg.NAT, cfg.NAT6}))
 		b.Device.Store(dev)
 		stk, nic := tdev.GetStack(), tdev.NIC()
 		client := &http.Client{
