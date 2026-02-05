@@ -39,8 +39,8 @@ func main() {
 		slog.SetLogLoggerLevel(cfg.LogLevel)
 
 		b := bind.New(&cfg)
-		tdev := try.To1(vtun.CreateTUN("salt-link", bind.MTU))
-		logger := logger.New("salt-link")
+		tdev := try.To1(vtun.CreateTUN("well-net", bind.MTU))
+		logger := logger.New("well-net")
 		dev := device.NewDevice(tdev, b, logger)
 		try.To(dev.IpcSet(cfg.IpcConfig()))
 		try.To(dev.Up())
