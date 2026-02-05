@@ -12,7 +12,7 @@ require (
 	github.com/shynome/err0 v0.2.1
 	github.com/shynome/hack-gojs v0.0.1
 	github.com/shynome/wahttp v0.0.8
-	github.com/shynome/wgortc v0.8.5
+	github.com/shynome/wgortc v0.8.6
 	golang.zx2c4.com/wireguard v0.0.0-20231211153847-12269c276173
 	gvisor.dev/gvisor v0.0.0-20230927004350-cbd86285d259
 )
