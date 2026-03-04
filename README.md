@@ -68,3 +68,7 @@ void (async function main() {
   const z = await net.fetch("192.168.211.2:80")
 })()
 ```
+
+# Todo
+
+- [ ] WebRTC 连接建立不成功时会无限重连, 目前只能在服务端设置 NoWebRTC 后才能正常运行
